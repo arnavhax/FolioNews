@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{% static 'main/main.css' %}">
@@ -53,16 +54,22 @@
             <input type="text" id="sname" placeholder="Reliance" name="stock_name">
             </div>
             <div class="submitdiv">
-            <input type="submit" class="submitbutton">
+            <input type="submit" class="submitbutton" value="Add Stock">
             </div>
         </form>
         <h3>Your Stocks:</h3>
         <table>
           {% if stock_list%}
           <ul>
-            {% for stock in stock_list%}
-            <li>{{stock}}</li>
-            {%endfor%}
+            {% for stock in stock_list %}
+          <li>{{ stock }}
+            <form action="{% url 'delete' stock %}" method="POST" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" style="color: red;" value="delete">
+          </button> 
+          </form>
+          </li>
+          {% endfor %}
           </ul>
           {%else%}
           <p>No Stocks available</p>

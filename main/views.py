@@ -90,6 +90,7 @@ class MyLoginView(LoginView):
 def logout_view(request):
     logout(request)
     return redirect('/') 
-
-def about(request):
-     pass
+def delete(request, name):
+    stock = Stock.objects.filter(name=name, user_name=request.user).first()
+    stock.delete()
+    return redirect('/update')

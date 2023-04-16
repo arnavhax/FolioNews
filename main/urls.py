@@ -12,5 +12,5 @@ urlpatterns = [
     path('register/', SignUpView.as_view(), name='register'),
     path('', MyLoginView.as_view(), name='login'),
     path('logout/', views.logout_view, name='logout'),
-    path('about/', views.about, name='about'),
+    path('delete/<str:name>/', views.delete, name='delete'),
 ]
