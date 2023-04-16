@@ -1,6 +1,7 @@
 
 from django.http import HttpResponse
 from django.template import loader
+from django.contrib.auth.decorators import login_required
 from .models import Stock
 from django.contrib.auth.models import User
 from bs4 import BeautifulSoup as bs
@@ -15,7 +16,7 @@ from django.contrib.auth import logout
 from django.shortcuts import redirect
 
 # Create your views here.
-
+@login_required
 def update(request):
     User = get_user_model()
     logged_in_user = request.user
@@ -59,7 +60,7 @@ def update(request):
     }
     # news_list = "pass after getting links of news"
     return HttpResponse(template.render(context, request))
-
+@login_required
 def main(request):
     User = get_user_model()
     logged_in_user = request.user
@@ -69,6 +70,7 @@ def main(request):
         "stock_list": stock_list,
     }
     return HttpResponse(template.render(context, request))
+@login_required
 def saveStock(request):
     if request.method =='POST':
         name=request.POST.get('stock_name')
@@ -86,10 +88,12 @@ class SignUpView(CreateView):
 
 class MyLoginView(LoginView):
     template_name = 'registration/login.html'
-
+@login_required
 def logout_view(request):
     logout(request)
     return redirect('/') 
+
+@login_required
 def delete(request, name):
     stock = Stock.objects.filter(name=name, user_name=request.user).first()
     stock.delete()
