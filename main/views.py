@@ -97,4 +97,4 @@ def logout_view(request):
 def delete(request, name):
     stock = Stock.objects.filter(name=name, user_name=request.user).first()
     stock.delete()
-    return redirect('/update')
+    return redirect('/main')
