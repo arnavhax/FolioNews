@@ -1,0 +1,152 @@
+body
+{
+    background-image: url("2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+
+.container
+{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.367);
+    width:95%;
+    color:rgba(8, 78, 104, 0.761);
+    font-family:sans-serif;
+    height: 100%;
+}
+.site-header
+{
+    width:100%;
+    color: antiquewhite;
+    margin-bottom:3.5%;
+    background-color: transparent;
+}
+.navbar-brand
+{
+    size: 50px;
+    height:52px;
+    color:rgba(8, 78, 104, 0.761);
+    margin-left: -16px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 12px;
+}
+.navbar-brand:hover
+{
+    background-color:rgba(8, 78, 104, 0.788);
+    color:white;
+}
+.collapse
+{
+    background-color: rgba(8, 78, 104, 0.761);
+    margin-left: 60%;
+    width:100%;
+    margin-right: -15px;
+}
+.nav-item
+{
+    color:rgba(8, 78, 104, 0.761);
+    padding: 5%;
+    text-align: center;
+    width:93px;
+}
+.nav-item:hover{
+    background-color:rgba(8, 78, 104, 0.819);
+}
+
+.submitbutton
+{
+    border-style: none;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color:white;
+    background-color:rgba(8, 78, 104, 0.676);
+}
+.submitbutton:hover
+{
+    background-color:rgba(255, 255, 255, 0.198);
+    color:rgba(8, 78, 104, 0.819);
+}
+.sname
+{
+    background-color: rgba(255, 255, 255, 0.182);
+    width: 100%;
+    padding: 5px;
+    margin: 0%;
+}
+.subhead
+{
+    width: 100%;
+    padding: 2px;
+    margin: 0%;
+    margin-top: 0%;
+}
+
+.subhead {
+    overflow: hidden;
+    border-right: .15em solid rgba(8, 78, 104, 0.819);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .025em;
+    animation: 
+      typing 5s steps(40, end) infinite,
+      blink-caret .75s step-end infinite;
+    margin-bottom: 15px;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgba(8, 78, 104, 0.819); }
+  }
+  .subhead:hover{
+    animation: stop;
+  }
+
+  .submitdiv
+  {
+    padding: 5px;
+    background-color:rgba(255, 255, 255, 0.141);
+  }
+  table
+  {
+    background-color:  rgba(255, 255, 255, 0.072);
+  }
+  p{
+    background-color:  rgba(255, 255, 255, 0.036);
+  }
+  h3{
+    margin-top: -16px;
+    padding: 5px;;
+    background-color:  rgba(255, 255, 255, 0.092);
+  }
+  #second{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.367);
+    width:95%;
+    color:rgba(8, 78, 104, 0.761);
+    font-family:sans-serif;
+    height:fit-content;
+  }
+.btn {
+  background-color:transparent;
+  border: none; 
+  color: rgba(8, 78, 104, 0.761);
+  font-size: 13px; 
+  cursor: pointer; 
+  text-align:right;
+}
+.btn:hover {
+  background-color:rgba(8, 78, 104, 0.107);
+}
+
+.newsList{
+  
+    display: inline-block; 
+    text-align: left; 
+}
