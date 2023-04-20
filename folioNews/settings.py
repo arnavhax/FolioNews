@@ -131,3 +131,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 LOGIN_REDIRECT_URL = 'main/'
 LOGIN_URL = 'login/'
+CSRF_TRUSTED_ORIGINS = ['https://folionews-production.up.railway.app/','https://*.127.0.0.1']
