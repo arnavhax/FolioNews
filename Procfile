@@ -1,1 +1,0 @@
-web: gunicorn folioNews.wsgi --log-file -
