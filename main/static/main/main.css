@@ -146,6 +146,7 @@ body
   width: 20px;
   height: 20px;
   animation: spin 2s linear infinite;
+  align-items: center;
 }
 
 @keyframes spin {
