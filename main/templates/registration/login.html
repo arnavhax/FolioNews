@@ -22,9 +22,11 @@
     </div>
         <div class='container'>
         <h1 class="head">FOLIO NEWS</h1>
-        <hr>
     </div>
         <div class='content-section'><!--bootstrap class-->
+            <div class="border-top pt-3" style = "position:relative; left:0px; top:-30px;">
+                <small class="text-muted">Need an account?<a class="ml-2" href={% url 'register'%}>Sign Up</a></small>
+            </div>
             <form method="POST">
                 {% csrf_token %} <!--for django security-->
                 <fieldset class="form-group"><!--bootstrap class-->
@@ -32,9 +34,6 @@
                 </fieldset>
                 <div class="form-group"><!--bootstrap class-->
                     <button class="btn btn-outline-info" type="submit">Login</button>
-                </div>
-                <div class="border-top pt-3">
-                    <small class="text-muted">Need an account?<a class="ml-2" href={% url 'register'%}>Sign Up</a></small>
                 </div>
                 
         </div>

@@ -1,4 +1,3 @@
-
 document.getElementById('saveStockForm').addEventListener('submit', function(event) {
     console.log("event listner hit")
     event.preventDefault(); // Prevent the default form submission
