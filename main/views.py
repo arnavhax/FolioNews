@@ -62,6 +62,7 @@ def update(request):
     return HttpResponse(template.render(context, request))
 @login_required
 def main(request):
+    
     User = get_user_model()
     logged_in_user = request.user
     stock_list = User.objects.filter(pk=logged_in_user.pk).values_list('stock__name', flat=True)
@@ -69,7 +70,7 @@ def main(request):
     context = {
         "stock_list": stock_list,
     }
-    return HttpResponse(template.render(context, request))
+    return redirect('/update')
 @login_required
 def saveStock(request):
     if request.method =='POST':
