@@ -52,3 +52,30 @@ document.querySelectorAll('.deleteStockForm').forEach(function(form) {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to show loader and hide button
+    function showLoader(button, loaderId) {
+      button.style.display = 'none';
+      document.getElementById(loaderId).style.visibility = 'visible';
+    }
+  
+    // Handle saveStockForm submission
+    document.getElementById("saveStockForm").addEventListener("submit", function(event) {
+      showLoader(document.getElementById("submit_button"), "loader");
+    });
+  
+    // Handle updateForm submission
+    document.getElementById("updateForm").addEventListener("submit", function(event) {
+      showLoader(document.getElementById("update_button"), "loader");
+    });
+  
+    // Handle deleteStockForm submission
+    document.querySelectorAll(".deleteStockForm").forEach(function(form) {
+      form.addEventListener("submit", function(event) {
+        const button = form.querySelector("button");
+        showLoader(button, "loader");
+      });
+    });
+  });
+  

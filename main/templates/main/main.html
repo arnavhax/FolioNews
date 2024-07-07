@@ -17,6 +17,7 @@
         <link rel="icon" type="image/x-icon" href="mlogo.png">
         </head>
     <body>
+    <div class="loader"></div>
     <div class='col-md-8'>
          {% if messages%}
                 {% for message in messages%}
@@ -58,7 +59,6 @@
             </div>
             <div class="submitdiv">
             <input type="submit" class="submitbutton" value="Add Stock" id="submit_button">
-            <div class="loader"></div>
             </div>
         </form>
         <br></br>
@@ -86,7 +86,7 @@
           {% csrf_token %}
           {{form|crispy}}
             <div class="submitdiv">
-            <input type="submit" value="Update News" class="submitbutton">
+            <input type="submit" value="Update News" class="submitbutton" id="update_button">
             </div>
         </form>
         <h2 class="subhead" style="font-family:serif;">Here is your personalised news feed...</h2>
