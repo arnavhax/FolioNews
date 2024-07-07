@@ -139,53 +139,16 @@ body
     display: inline-block; 
     text-align: left; 
 }
-.circular-button {
-  position: relative;
-  overflow: hidden;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 50%;
-  padding: 12px 24px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.circular-button:hover {
-  background-color: #0056b3;
-}
-
-.button-text {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-top-color: #fff;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
   border-radius: 50%;
-  animation: spin 1s linear infinite;
-  opacity: 0;
-  pointer-events: none; /* Prevents the loader from being clickable */
-}
-
-.circular-button.loading .loader {
-  opacity: 1;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
