@@ -1,52 +1,33 @@
-body
-{
-    background-image: url("2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-attachment:fixed;
+/* Remove specific width and margins */
+.container-fluid {
+    background-color: rgba(255, 255, 255, 0.367);
+    color: rgba(8, 78, 104, 0.761);
+    font-family: sans-serif;
+    min-height: 100vh;
 }
 
-.container
-{
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.367);
-    width:30%;
-    margin-top: 14% ;
-    color:rgba(8, 78, 104, 0.761);
-    font-family:sans-serif;
+.card {
+    background-color: rgba(255, 255, 255, 0.341);
+    color: rgba(8, 78, 104, 0.761);
+    font-family: sans-serif;
+    margin-top: 14%;
 }
-.content-section
-{
-    text-align: center;
-    background-color:rgba(255, 255, 255, 0.341);
-    margin-left: 35%;
-    width:30%;
-    height:110%;
-    margin-top: 0%;
-    align-content: center;
-    font-family:sans-serif;
-}
-.form-group
-{
-    height:30%;
-}
-.btn
-{
+
+.btn {
     background-color: rgba(8, 78, 104, 0.66);
     color: azure;
     border-color: transparent;
 }
-.head
-{
+
+.head {
     font-size: 180%;
-    height: 5%;
-    padding-top:2%;
+    padding-top: 2%;
 }
-.main-form{
-    height: 1800px;
-    color:rgba(8, 78, 104, 0.761);
+
+.main-form {
+    padding: 20px;
 }
-.border-top{
-    margin-top: -136%;
+
+.border-top {
+    margin-top: 20px;
 }

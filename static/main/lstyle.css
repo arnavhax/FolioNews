@@ -1,52 +1,27 @@
-body
-{
-    background-image: url("2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-attachment: scroll;
-}
-.container
-{
-    text-align: center;
+/* Remove specific width and margins */
+.container-fluid {
     background-color: rgba(255, 255, 255, 0.367);
-    width:30%;
-    margin-top: 14% ;
-    color:rgba(8, 78, 104, 0.761);
-    font-family:sans-serif;
+    color: rgba(8, 78, 104, 0.761);
+    font-family: sans-serif;
+    height: 100%;
 }
-.container:hover
-{
-    color:rgba(8, 78, 104, 0.813);
+
+.card {
+    background-color: rgba(255, 255, 255, 0.341);
+    color: rgba(8, 78, 104, 0.761);
+    font-family: sans-serif;
 }
-.content-section
-{
-    text-align: center;
-    background-color:rgba(255, 255, 255, 0.341);
-    margin-left: 35%;
-    width:30%;
-    height:100%;
-    margin-top: 0%;
-    align-content: center;
-    font-family:sans-serif;
-    color:rgba(8, 78, 104, 0.761);
-}
-.form-group
-{
-    height:30%;
-}
-.btn
-{
+
+.btn {
     background-color: rgba(8, 78, 104, 0.66);
     color: azure;
     border-color: transparent;
 }
-.head
-{
+
+.head {
     font-size: 180%;
-    height: 5%;
-    padding-top:2%;
 }
-.border-top{
-    margin-top:0%;
+
+.text-muted {
+    margin-top: 0%;
 }
